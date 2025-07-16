@@ -269,3 +269,21 @@ overflow: hidden;
 .card:hover{
   transform: rotateY(180deg);
 }
+@media (max-width: 400px) {
+  .name {
+    width: 100%; /* خليه ياخد عرض أكبر في الموبايل */
+    animation: typing-small 2s steps(30) forwards;
+    font-size: 19px;
+  }
+
+  @keyframes typing-small {
+    from {
+      width: 0%;
+      color: rgb(209, 82, 82);
+    }
+    to {
+      width: 100%;
+      color: red;
+    }
+  }
+}

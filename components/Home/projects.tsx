@@ -31,14 +31,14 @@
     if (rows.length === 0) return null
 
     return (
-      <section className='flex relative flex-col  gap-5 lg:flex-row mt-50  min-h-[1250px] max-sm:min-h-[1370px]  p-4 rounded-lg '>
+      <section className='flex relative flex-col gap-20 lg:gap-5 lg:flex-row mt-50  min-h-[1250px] max-sm:min-h-[1370px]  p-4 rounded-lg '>
         <div className='flex-1/2 flex flex-col  gap-10 max-sm:items-start max-sm:gap-2'>
          <p className="background-text  text-6xl font-semibold">Bringing Ideas to Life with Modern Web Development</p>
         </div>
 
         <div className='flex-1/2 max-sm:-mt-150  '>
                   <h1 className='text-7xl font-semibold oswald-font'>What I’ve Built</h1>
-          <div className='bg-gray-800 p-3  rounded-md  flex flex-col gap-2'>
+          <div className='bg-gray-800 p-3 mt-10 lg:mt-1 rounded-md  flex flex-col gap-2'>
             {rows.map((row, rowIndex) => {
               if (!boxRefs.current[rowIndex]) boxRefs.current[rowIndex] = []
 

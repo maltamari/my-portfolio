@@ -4,9 +4,9 @@ import React from 'react'
 
 function Introduction() {
   return (
-      <section className='border  mt-30 *:border-gray-200 dark:border-gray-700   rounded-lg shadow-md'>
-       <div className="flex  flex-col lg:flex-row  justify-baseline items-center lg:items-start gap-20 p-4">
-          <Image width={300} height={300} src={"/me.jpg"}alt="My photo" /> 
+      <section className='border w-full mt-30 *:border-gray-200 dark:border-gray-700   rounded-lg shadow-md'>
+       <div className="flex  flex-col lg:flex-row  justify-baseline items-center lg:items-start gap-10 p-4">
+          <Image width={300} height={300} src={"/me.jpg"} alt="My photo" /> 
           <div className=' flex flex-col justify-center items-start gap-2'>
           <span className='oswald-font name '>🧑‍💻 Mohamed Abdallah — Full Stack Web Developer</span>
           <h2 className='text-3xl w-full md:text-4xl font-bold '>Turning ideas into interactive, real-world web experiences</h2>

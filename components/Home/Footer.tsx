@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 function Footer() {
   return (
-    <footer className="dark:bg-gray-900 bg-blue-100 flex flex-col items-center justify-center py-14 px-6">
+    <footer className="dark:bg-gray-900 bg-blue-100 flex flex-col items-center justify-center h-60">
       <div className='flex justify-center items-center gap-2 mt-4'>
           <Logo/>
           <Link href="/" className="text-blue-400  hover:underline">

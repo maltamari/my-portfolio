@@ -28,12 +28,12 @@ function Contents() {
      
     <div className=' p-10 rounded-lg shadow-lg w-full '>
       <FormContainer action={handleSubmit}>
-        <div className="space-y-4  grid grid-cols-1 md:grid-cols-2  gap-4">
+        <div className="space-y-4  grid grid-cols-1 lg:grid-cols-2  gap-4">
           <FormInput name="name" type="text" start="*"  required={true}/>
           <FormInput name="email" type="email"  start="*" required={true}/>
           <FormInput name="address" type="text"  />
           <FormInput name="phone" type="number"  />
-          <div className='col-span-2'>
+          <div className='col-span-1 lg:col-span-2'>
             <FormInput  name="subject" type="text" start="*" required={true} />
           </div>
         </div>
