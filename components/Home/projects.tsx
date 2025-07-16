@@ -38,7 +38,7 @@
 
         <div className='flex-1/2 max-sm:-mt-150  '>
                   <h1 className='text-7xl font-semibold oswald-font'>What I’ve Built</h1>
-          <div className='bg-gray-800 p-3 mt-10 lg:mt-1 rounded-md  flex flex-col gap-2'>
+          <div className='bg-gray-800 p-3 mt-10 lg:mt-1 rounded-md w-full flex flex-col gap-2'>
             {rows.map((row, rowIndex) => {
               if (!boxRefs.current[rowIndex]) boxRefs.current[rowIndex] = []
 
@@ -113,7 +113,7 @@
                           ref={(el) => {
                             if (el) boxRefs.current[rowIndex][cellIndex] = el
                           }}
-                          className="md:w-[75px] md:h-[75px] h-[50px] w-[50px]  bg-gray-900 rounded-md box "
+                          className="md:w-[75px] md:h-[75px] h-[40px] w-[40px]  bg-gray-900 rounded-md box "
                           onClick={() => {
                             const box = boxRefs.current[rowIndex][cellIndex]
                             if (!box?.classList.contains("active")) return
