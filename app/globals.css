@@ -211,17 +211,16 @@
 @keyframes typing {
   from {
     width: 0%;
-    color: rgb(209, 82, 82);
   }
   50% {
-    color: rgb(163, 50, 50);
+  
   }
   70% {
-    color: rgb(193, 51, 51);
+   
   }
   to {
     width: 50%;
-    color: red;
+    
   }
 }
 
@@ -235,11 +234,11 @@
   @keyframes typing-small {
     from {
       width: 0%;
-      color: rgb(209, 82, 82);
+ 
     }
     to {
       width: 95%;
-      color: red;
+
     }
   }
 }
@@ -279,11 +278,11 @@ overflow: hidden;
   @keyframes typing-small {
     from {
       width: 0%;
-      color: rgb(209, 82, 82);
+     
     }
     to {
       width: 100%;
-      color: red;
+
     }
   }
 }
