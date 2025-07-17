@@ -42,6 +42,6 @@ ${result.data.content ?? "(No message)"}
 
     return { message: "✅ Message sent successfully!" };
   } catch (e) {
-    return { message: "❌ Error sending email" };
+    return { message: `❌ Error sending email :${e}` };
   }
 }
