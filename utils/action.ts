@@ -15,6 +15,28 @@ export async function handleSubmit(
     const messages = result.error.issues.map((e) => `${e.path.join(".")}: ${e.message}`);
     return { message: `❌ ${messages.join(" | ")}` };
   }
+    // ✅ Email Validation via Kickbox
+
+    const emailToCheck = result.data.email;
+  const kickboxApiKey = process.env.KICKBOX_API_KEY;
+
+  try {
+    const res = await fetch(
+      `https://api.kickbox.com/v2/verify?email=${emailToCheck}&apikey=${kickboxApiKey}`
+    );
+
+    const data = await res.json();
+
+    if (data.result !== "deliverable") {
+      return {
+        message: "❌ Please enter a valid real email address 📧",
+      };
+    }
+  } catch (err) {
+    return {
+      message: "❌ Failed to validate email address.",
+    };
+  }
 
   // ✅ Send email if validation passes
   try {
