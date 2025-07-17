@@ -11,44 +11,28 @@ export async function handleSubmit(
   const rowData = Object.fromEntries(formData.entries());
   const result = validateSchema.safeParse(rowData);
 
-if (!result.success) {
-  const messages = result.error.issues.map((e) => `${e.path.join(".")}: ${e.message}`);
-  return { message: `❌ ${messages.join(" | ")}` };
-}
+  if (!result.success) {
+    const messages = result.error.issues.map((e) => `${e.path.join(".")}: ${e.message}`);
+    return { message: `❌ ${messages.join(" | ")}` };
+  }
 
-
-  // ✅ Email Validation via MailboxLayer with timeout
+  // ✅ Email Validation via Kickbox
   const emailToCheck = result.data.email;
-  const apiKey = process.env.MAILBOXLAYER_API_KEY;
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 3000); // 3 ثواني
+  const kickboxApiKey = process.env.KICKBOX_API_KEY;
 
   try {
     const res = await fetch(
-      `https://apilayer.net/api/check?access_key=${apiKey}&email=${emailToCheck}&smtp=1&format=1`,
-      { signal: controller.signal }
+      `https://api.kickbox.com/v2/verify?email=${emailToCheck}&apikey=${kickboxApiKey}`
     );
-
-    clearTimeout(timeout);
 
     const data = await res.json();
 
-    if (!data.format_valid || !data.mx_found || !data.smtp_check) {
+    if (data.result !== "deliverable") {
       return {
         message: "❌ Please enter a valid real email address 📧",
       };
     }
   } catch (err) {
-    clearTimeout(timeout); // تأكد من مسح التايمر لو صار خطأ
-
-    // إذا السبب كان أن الطلب انلغى
-    if ((err as any).name === "AbortError") {
-      return {
-        message: "❌ Email validation timed out. Please try again.",
-      };
-    }
-
     return {
       message: "❌ Failed to validate email address.",
     };

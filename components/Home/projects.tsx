@@ -31,7 +31,7 @@
     if (rows.length === 0) return null
 
     return (
-      <section className='flex relative flex-col gap-20 lg:gap-5 lg:flex-row mt-50  min-h-[1250px] max-sm:min-h-[1370px]  p-4 rounded-lg '>
+      <section className='flex relative flex-col gap-20 lg:gap-5 lg:flex-row mt-50  min-h-[1320px] max-sm:min-h-[1370px]  p-4 rounded-lg '>
         <div className='flex-1/2 flex flex-col  gap-10 max-sm:items-start max-sm:gap-2'>
          <p className="background-text  text-6xl font-semibold">Bringing Ideas to Life with Modern Web Development</p>
         </div>
@@ -72,13 +72,9 @@
                       </div>
 
                       <div className="card-item w-[80%] gap-10 border border-gray-300 rounded-md mb-2 mt-2">
-                        <video
-                          src={selectedBox.item.video}
-                          className="w-full rounded-md shadow-2xl shadow-gray-800 transition-all duration-300 object-contain"
-                          controls
-                          autoPlay
-                          muted
-                          loop
+                        <img
+                          src={selectedBox.item.img}
+                          className="w-full rounded-md shadow-2xl shadow-gray-800 transition-all duration-300 object-contain"    
                         />
                       </div>
                       </div>
@@ -99,6 +95,13 @@
                     <div className="card-item text-content">
                         <h2 className="text-lg font-bold">Tech Stack</h2>
                         <p className="text-lg">{selectedBox.item.Tech}</p>
+                    </div>
+                    <div className="card-item text-content">
+                        <ul className="">
+                            <li>
+                              <a target='_blank' className=' text-blue-600 text-2xl' href={selectedBox.item.link}>{selectedBox.item.h1}</a>
+                              </li>  
+                        </ul>
                     </div>
                     </div>
                     </div>

@@ -8,7 +8,7 @@ function Service() {
         What I Can Build For You
     </h2>
    
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-24 lg:gap-x-34 gap-y-7 w-full  mt-20 justify-items-center '>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 g:gap-x-24 gap-x-34 gap-y-7 w-full  mt-20 justify-items-center '>
    { services.map((service, index) => (
     <div className='card text-amber-50 shadow-[0_4px_8px_rgba(0,0,0,0.8)] dark:shadow-[0_8px_18px_rgba(255,255,255,0.4)] rounded-lg'  key={index}>
       <div className='card-face flex items-center w-full  font-bold  justify-center bg-[linear-gradient(120deg,#e74c3c,orange)]'>

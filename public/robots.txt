@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://my-portfolio-seven-sable-75.vercel.app
+
+# Sitemaps
+Sitemap: https://my-portfolio-seven-sable-75.vercel.app/sitemap.xml

@@ -24,10 +24,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Portfoli",
-  description: "",
-};
+// إذا كنت تستخدم app directory
+export const metadata = {
+  title: "Mohamed Abdallah| Full Stack Developer",
+  description: "Creative and passionate full stack developer building modern web applications with Next.js and React.",
+}
+
 
 export default function RootLayout({
   children,
@@ -43,6 +45,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
           rel="stylesheet"
         />
+          <meta name="description" content="Creative and passionate full stack developer..." />
       </head>
       <body>
           <ThemeProvider 
