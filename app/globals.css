@@ -213,14 +213,11 @@
     width: 0%;
   }
   50% {
-  
   }
   70% {
-   
   }
   to {
     width: 50%;
-    
   }
 }
 
@@ -234,11 +231,9 @@
   @keyframes typing-small {
     from {
       width: 0%;
- 
     }
     to {
       width: 95%;
-
     }
   }
 }
@@ -268,21 +263,19 @@ overflow: hidden;
 .card:hover{
   transform: rotateY(180deg);
 }
-@media (max-width: 400px) {
+@media (min-width: 380px) {
   .name {
     width: 100%; /* خليه ياخد عرض أكبر في الموبايل */
     animation: typing-small 2s steps(30) forwards;
-    font-size: 19px;
+    font-size: 17px;
   }
 
   @keyframes typing-small {
     from {
       width: 0%;
-     
     }
     to {
       width: 100%;
-
     }
   }
 }
