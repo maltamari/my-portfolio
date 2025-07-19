@@ -222,7 +222,7 @@
 }
 
 /* Media query للشاشات الصغيرة */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .name {
     width: 95%; /* خليه ياخد عرض أكبر في الموبايل */
     animation: typing-small 2s steps(30) forwards;
