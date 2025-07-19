@@ -225,7 +225,7 @@
 @media (min-width: 768px) {
   .name {
     width: 95%; /* خليه ياخد عرض أكبر في الموبايل */
-    animation: typing-small 2s steps(30) forwards;
+    animation: typing-small 2s steps(50) forwards;
   }
 
   @keyframes typing-small {
@@ -263,7 +263,7 @@ overflow: hidden;
 .card:hover{
   transform: rotateY(180deg);
 }
-@media (min-width: 360px) {
+@media (min-width: 320px) and (max-width: 700px) {
   .name {
     width: 100%; /* خليه ياخد عرض أكبر في الموبايل */
     animation: typing-small 2s steps(28) forwards;
@@ -277,5 +277,11 @@ overflow: hidden;
     to {
       width: 100%;
     }
+  }
+}
+@media (min-width: 320px) and (max-width: 400px) {
+ .mediax{
+    width: 120%; /* خليه ياخد عرض أكبر في الموبايل */
+ 
   }
 }
