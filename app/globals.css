@@ -263,11 +263,11 @@ overflow: hidden;
 .card:hover{
   transform: rotateY(180deg);
 }
-@media (min-width: 380px) {
+@media (min-width: 360px) {
   .name {
     width: 100%; /* خليه ياخد عرض أكبر في الموبايل */
-    animation: typing-small 2s steps(30) forwards;
-    font-size: 17px;
+    animation: typing-small 2s steps(28) forwards;
+    font-size: 16px;
   }
 
   @keyframes typing-small {
