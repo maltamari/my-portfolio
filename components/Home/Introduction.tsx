@@ -19,7 +19,7 @@ function Introduction() {
         <Image width={300} height={300} src={"/me.jpg"} alt="My photo" /> 
         <div className='flex flex-col justify-center items-start gap-2'>
           <span className='oswald-font name'>🧑‍💻 Mohamed Abdallah — Full Stack Web Developer</span>
-          <h2 className='text-3xl w-full md:text-5xl font-bold oswald-font '>Turning ideas into interactive, real-world web experiences</h2>
+          <h2 className='text-2xl w-full md:text-5xl font-bold oswald-font '>Turning ideas into interactive, real-world web experiences</h2>
 
           <p className='oswald-font leading-relaxed letter-spacing text-xl font-serif'>
             {displayedText}
