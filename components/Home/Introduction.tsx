@@ -42,7 +42,8 @@ function Introduction() {
                       src={image.href}
                       width={50}
                       height={50}
-                      alt={"Mohamed Abdallah Profile Picture"}
+                      alt={"Mohamed Abdallah Profile Picture"}                   
+                      loading="lazy"
                     />
                     <div className="absolute border-sky-100 border-1 rounded-sm inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-350 bg-black text-white text-sm font-bold">
                       {image.name}
