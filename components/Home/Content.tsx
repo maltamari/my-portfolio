@@ -15,7 +15,7 @@ function Contents() {
       <p>Great things start with a simple hello—so if you’re thinking about a project or just want to bounce around some ideas, let’s connect!</p>
     </div>
     <div className='mt-12 flex flex-col gap-5 md:flex-row  items-start justify-between mb-10 '>
-    <div className=' *:p-5 rounded-lg mr-10 shadow-lg  w-full'>
+    <div className=' *:p-5 mb-10 rounded-lg mr-10 shadow-lg  w-[120%]'>
       <div className='flex items-center gap-4 mb-5'>
        <div className='border-1 border-gray-50 w-12 h-12 rounded-md p-3'> <LucidePhone/></div>
         <p>+00962792504045</p>
