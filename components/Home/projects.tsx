@@ -75,7 +75,9 @@
                         <img
                           src={selectedBox.item.img}
                           className="w-full rounded-md shadow-2xl shadow-gray-800 transition-all duration-300 object-contain"    
-                        />
+                           alt={selectedBox.item.h1}
+                          loading="lazy"
+                          />
                       </div>
                       </div>
                       <div className="card-item text-content">
