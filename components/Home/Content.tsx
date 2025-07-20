@@ -26,7 +26,7 @@ function Contents() {
       </div>
     </div>
      
-    <div className=' p-10 rounded-lg shadow-lg w-full '>
+    <div className=' p-10 ml-10 lg:ml-0 rounded-lg shadow-lg w-full '>
       <FormContainer action={handleSubmit}>
         <div className="space-y-4  grid grid-cols-1 lg:grid-cols-2  gap-4">
           <FormInput name="name" type="text" start="*"  required={true}/>
