@@ -3,7 +3,7 @@ import React from 'react'
 
 function Service() {
   return (
-    <section className='flex flex-col items-center justify-center mt-10  p-4 rounded-lg  '>
+    <section className='flex flex-col ml-15 lg:ml-0 items-center justify-center mt-10  p-4 rounded-lg  '>
       <h2 className="text-5xl font-bold  text-center">
         What I Can Build For You
     </h2>
