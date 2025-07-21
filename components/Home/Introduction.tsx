@@ -1,4 +1,5 @@
 import { linksImages } from '@/utils/links'
+import { LucideFileDown } from 'lucide-react'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
@@ -14,9 +15,9 @@ function Introduction() {
   const displayedText = showMore ? description : description.slice(0, maxChars) + (isLong ? "..." : "");
 
   return (
-    <section className='mediax border w-full mt-30 *:border-gray-200 dark:border-gray-700 rounded-lg shadow-md'>
+    <section className='border w-full mt-30 mediax *:border-gray-200 dark:border-gray-700 rounded-lg shadow-md'>
       <div className="flex flex-col lg:flex-row justify-baseline items-center lg:items-start gap-10 p-4">
-        <Image width={300} height={300} src={"/me.jpg"} alt="My photo" /> 
+        <Image width={300} height={300} src={"/me.jpg"} alt="My photo" loading="lazy" /> 
         <div className='flex flex-col justify-center items-start gap-2'>
           <span className='oswald-font name'>🧑‍💻 Mohamed Abdallah — Full Stack Web Developer</span>
           <h2 className='text-2xl w-full md:text-5xl font-bold oswald-font '>Turning ideas into interactive, real-world web experiences</h2>
@@ -42,8 +43,7 @@ function Introduction() {
                       src={image.href}
                       width={50}
                       height={50}
-                      alt={"Mohamed Abdallah Profile Picture"}                   
-                      loading="lazy"
+                      alt={"Mohamed Abdallah Profile Picture"}
                     />
                     <div className="absolute border-sky-100 border-1 rounded-sm inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-350 bg-black text-white text-sm font-bold">
                       {image.name}
@@ -52,8 +52,11 @@ function Introduction() {
                 ))}
               </div>
             </div>
-            <h5 className='text-2xl oswald-font'>1+ year of hands-on experience with industry-standard design tools</h5>
+            <h5 className='text-2xl oswald-font'>1+ year of hands-on experience with industry-standard design tools</h5>         
           </div>
+          <a href="/MohamedAbdallah.pdf" target="_blank" rel="noopener noreferrer" className='text-blue-500 flex *:hover:text-blue-700 transition duration-200 text-lg items-center gap-1 hover:font-bold'>
+           <LucideFileDown/> View CV
+           </a>
         </div>  
       </div>
     </section>
