@@ -18,7 +18,7 @@ const Data = [
   },
   {
     img: "/flixx.png",
-    h1: "Movies WebSite",
+    h1: "Flixx – Movies & TV Shows Web App",
     Overview: `Flixx is a responsive and modern movie streaming web application built with React.js, designed to allow users to explore a wide selection of films sourced from an external movie database API. The project showcases a smooth and dynamic UI, providing movie details, trailers, and ratings in a sleek user experience.`,
     Key: {
       "Fetched": "Fetched and displayed data from a third-party movie API in real-time",
