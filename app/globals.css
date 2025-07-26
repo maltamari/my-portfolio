@@ -285,3 +285,16 @@ overflow: hidden;
  
   }
 }
+
+@media (min-width: 390px) and (max-width: 960px) {
+ .footerW{
+    width: 128%; /* خليه ياخد عرض أكبر في الموبايل */
+ 
+  }
+}
+@media (min-width: 370px) and (max-width: 860px) {
+ .footerw2{
+    width: 133%; /* خليه ياخد عرض أكبر في الموبايل */
+ 
+  }
+}
