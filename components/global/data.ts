@@ -16,22 +16,6 @@ const Data = [
     Tech: 'Next.js, React, Tailwind CSS, shadcn/ui, Supabase, Prisma ORM, Clerk Authentication',
     link:"https://nextjs-store-production.vercel.app/"
   },
-  {
-    img: "/flixx.png",
-    h1: "Flixx – Movies & TV Shows Web App",
-    Overview: `Flixx is a responsive and modern movie streaming web application built with vanilla JavaScript, designed to allow users to explore a wide selection of films sourced from an external movie database API. The project showcases a smooth and dynamic UI, providing movie details, trailers, and ratings in a sleek user .`,
-    Key: {
-      "Fetched": "Fetched and displayed data from a third-party movie API in real-time",
-      "Responsive": "Responsive design using modern CSS practices",
-      "Organized": "Modular and well-structured JavaScript codebase",
-      "Loading": "Loading states and error handling for a seamless user experience",
-      "Search": "Search and filter functionality to quickly find movies",
-      "Built": "Built with scalability in mind to support future additions like user accounts or saved lists"
-    },
-    Tech: 'HTML, CSS, JavaScript (vanilla JS), External Movie API (TMDB)',
-    link:"https://youtu.be/IO7fgg09EVM"
-
-  }
 ];
 
 export default Data;
