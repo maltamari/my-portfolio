@@ -14,7 +14,7 @@
     }, [])
 
     useEffect(() => {
-      boxRefs.current.slice(0, 2).forEach(row => {
+      boxRefs.current.slice(0, 1).forEach(row => {
         if (row.length === 0) return
 
         const randomIndex = Math.floor(Math.random() * row.length)
