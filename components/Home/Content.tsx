@@ -6,42 +6,61 @@ import Description from '../Form/TextArea'
 import { handleSubmit } from '@/utils/action'
 import { LucideMail, LucidePhone } from 'lucide-react'
 
-
 function Contents() {
   return (
-    <section className='mt-50 flex  flex-col  min-h-200'> 
-    <div className='md:w-[70%]  py-4'>
-      <h2 className='font-bold text-7xl mb-4'>Let’s Make Something Awesome </h2>
-      <p>Great things start with a simple hello—so if you’re thinking about a project or just want to bounce around some ideas, let’s connect!</p>
-    </div>
-    <div className='mt-12 flex flex-col gap-5 md:flex-row  items-start justify-between mb-10 '>
-    <div className=' *:p-5 mb-10 rounded-lg mr-10 shadow-lg  w-[120%]'>
-      <div className='flex items-center gap-4 mb-5'>
-       <div className='border-1 border-gray-50 w-12 h-12 rounded-md p-3'> <LucidePhone/></div>
-        <p>+00962792504045</p>
+    <section className='py-16 '> 
+      <div className='max-w-4xl lg:ml-12  mx-auto mb-12'>
+        <h2 className='font-bold text-3xl md:text-5xl lg:text-6xl mb-6 leading-tight'>
+          Let's Make Something Awesome
+        </h2>
+        <p className='text-lg text-gray-600 dark:text-gray-300 leading-relaxed'>
+          Great things start with a simple hello—so if you're thinking about a project or just want to bounce around some ideas, let's connect!
+        </p>
       </div>
-       <div className='flex items-center gap-4 mb-5'>
-          <div className='border-1 border-gray-50 w-12 h-12 rounded-md p-3'> <LucideMail/></div>
-        <p>Mohamed.altamari17@gmail.com</p>
-      </div>
-    </div>
-     
-    <div className=' p-10 ml-10 lg:ml-0 rounded-lg shadow-lg w-full '>
-      <FormContainer action={handleSubmit}>
-        <div className="space-y-4  grid grid-cols-1 lg:grid-cols-2  gap-4">
-          <FormInput name="name" type="text" start="*"  required={true}/>
-          <FormInput name="email" type="email"  start="*" required={true}/>
-          <FormInput name="address" type="text"  />
-          <FormInput name="phone" type="number"  />
-          <div className='col-span-1 lg:col-span-2'>
-            <FormInput  name="subject" type="text" start="*" required={true} />
+      
+      <div className='max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-12'>
+        {/* Contact Info */}
+        <div className='lg:w-1/3'>
+          <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 space-y-6'>
+            <div className='flex items-center gap-4'>
+              <div className='bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-lg flex items-center justify-center'>
+                <LucidePhone className="text-blue-600 dark:text-blue-400" size={20} />
+              </div>
+              <p className='text-gray-700 dark:text-gray-300'>+00962792504045</p>
+            </div>
+            
+            <div className='flex items-center gap-4'>
+              <div className='bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-lg flex items-center justify-center'>
+                <LucideMail className="text-blue-600 dark:text-blue-400" size={20} />
+              </div>
+              <p className='text-gray-700 dark:text-gray-300 break-words'>Mohammed.abdallah.dev@gmail.com</p>
+            </div>
           </div>
         </div>
-        <Description iD="content" label="content" start="*" />
-        <Submit />
-      </FormContainer>
-    </div>
-    </div>
+        
+        {/* Contact Form */}
+        <div className='lg:w-2/3'>
+          <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 lg:p-8'>
+            <FormContainer action={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <FormInput name="name" type="text" start="*" required={true}/>
+                <FormInput name="email" type="email" start="*" required={true}/>
+                <FormInput name="address" type="text" />
+                <FormInput name="phone" type="tel" />
+                <div className='md:col-span-2'>
+                  <FormInput name="subject" type="text" start="*" required={true} />
+                </div>
+              </div>
+              
+              <div className='mb-6'>
+                <Description iD="content" label="content" start="*" />
+              </div>
+              
+              <Submit />
+            </FormContainer>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

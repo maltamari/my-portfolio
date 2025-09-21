@@ -15,7 +15,7 @@ function Introduction() {
   const displayedText = showMore ? description : description.slice(0, maxChars) + (isLong ? "..." : "");
 
   return (
-    <section className='border w-full mt-30 max-md:ml-10 mediax *:border-gray-200 dark:border-gray-700 rounded-lg shadow-md'>
+    <section className='border w-full  mt-30  *:border-gray-200 dark:border-gray-700 rounded-lg shadow-md'>
       <div className="flex flex-col lg:flex-row justify-baseline items-center lg:items-start gap-10 p-4">
         <Image width={300} height={300} src={"/me.jpg"} alt="My photo" loading="lazy" /> 
         <div className='flex flex-col justify-center items-start gap-2'>
