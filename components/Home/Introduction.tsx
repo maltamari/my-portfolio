@@ -1,7 +1,9 @@
 import { linksImages } from '@/utils/links'
 import { LucideFileDown } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useState } from 'react'
+import { Button } from '../ui/button'
 
 function Introduction() {
   const [showMore, setShowMore] = useState(false)
@@ -19,7 +21,7 @@ function Introduction() {
       <div className="flex flex-col lg:flex-row justify-baseline items-center lg:items-start gap-10 p-4">
         <Image width={300} height={300} src={"/me.jpg"} alt="My photo" loading="lazy" /> 
         <div className='flex flex-col justify-center items-start gap-2'>
-          <span className='oswald-font name'>🧑‍💻 Mohamed Abdallah — Full Stack Web Developer</span>
+          <span className='oswald-font name'>🧑‍💻 Mohammed Abdallah — Full Stack Web Developer</span>
           <h2 className='text-2xl w-full md:text-5xl font-bold oswald-font '>Turning ideas into interactive, real-world web experiences</h2>
 
           <p className='oswald-font leading-relaxed letter-spacing text-xl font-serif'>
@@ -54,9 +56,15 @@ function Introduction() {
             </div>
             <h5 className='text-2xl oswald-font'>1+ year of hands-on experience with industry-standard design tools</h5>         
           </div>
-          <a href="/MohamedAbdallah.pdf" target="_blank" rel="noopener noreferrer" className='text-blue-500 flex *:hover:text-blue-700 transition duration-200 text-lg items-center gap-1 hover:font-bold'>
-           <LucideFileDown/> View CV
-           </a>
+          <Link href="/MohamedAbdallah.pdf" target="_blank" rel="noopener noreferrer" >
+           <Button className="view">
+              <svg className="svgIcon" viewBox="0 0 384 512">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                ></path>
+              </svg>
+          </Button>
+           </Link>
         </div>  
       </div>
     </section>

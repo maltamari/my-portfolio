@@ -47,7 +47,7 @@ export default function RootLayout({
         />
           <meta name="description" content="Creative and passionate full stack developer..." />
       </head>
-      <body>
+      <body className="min-h-screen flex flex-col">
           <ThemeProvider 
             attribute="class"
             defaultTheme="system"

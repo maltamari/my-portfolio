@@ -1,15 +1,19 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
-type containerProps={
-  children:React.ReactNode,
-  className?:String
+
+type containerProps = {
+  children: React.ReactNode,
+  className?: string
 }
 
-function Container({children,className}:containerProps) {
+function Container({ children, className }: containerProps) {
   return (
-  <div className={cn('flex justify-center items-center box-border w-full ',className)}>
-     {children}
-  </div>
+    <div className={cn(
+      'w-full min-h-0 flex-1 flex flex-col justify-start items-center px-4 py-8', 
+      className
+    )}>
+      {children}
+    </div>
   )
 }
 

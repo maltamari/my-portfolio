@@ -1,7 +1,7 @@
 // app/page.tsx
 "use client"
 import { ScrollSection } from '@/components/global/ScrollSection';
-import Data from '@/components/global/data' 
+import Data from '@/utils/data' 
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -51,14 +51,14 @@ function Desc(item:any){
                 </div>    
               </div>
 
-             <div className='w-1/1 lg:w-1/2 ml-2 -mt-10 h-full flex flex-col  justify-center  rounded-md'>
+             <div className='w-1/1 lg:w-1/2 ml-2 -mt-10 h-full flex flex-col justify-center  rounded-md'>
              <Link href={item.link} target="_blank" className="w-[98%]   h-[65%] ">
                <Image
                 src={item.image}
                 alt={item.title}
                 width={1920}
                 height={1080}
-                className="w-[100%]   h-[100%] object-cover rounded-md  shadow-1xl shadow-gray-800 dark:shadow-gray-100 transition-all duration-300"
+                className="w-[100%]   h-[100%] object-cover rounded-md shadow-1xl shadow-gray-800 dark:shadow-gray-100 transition-all duration-300"
                 priority
               />
               </Link>

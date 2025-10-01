@@ -29,5 +29,5 @@ export const validateSchema = z.object({
 
   content: z.coerce.string()
     .min(15, { message: "Content must be at least 15 characters" })
-    .max(100, { message: "Content must be at most 100 characters" }),
+   
 });

@@ -8,7 +8,7 @@ function Services2() {
                 What I Can Build For You
             </h2>
         <ScrollSection direction="horizontal">
-      <section role="listitem" className='relative flex justify-end  w-full h-[70vh] p-4 rounded-lg  '>
+      <section role="listitem" className='relative overflow-hidden  flex justify-end  w-full h-[70vh] p-4 rounded-lg  '>
     <div>
     {services.map((service, index) => (
   <div

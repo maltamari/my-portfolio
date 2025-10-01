@@ -1,8 +1,10 @@
+"use client"
 import React from 'react'
-import Container from '../global/Container'
 import Logo from './logo'
 import Pages from './pages'
 import SideBar from './sidebar'
+import Side from './side'
+import { LucideAlignLeft } from 'lucide-react'
 
 function NavBar() {
   return (
@@ -12,6 +14,7 @@ function NavBar() {
             <Pages/>
             <SideBar/>
           </div>
+           <Side />
     </nav>
   )
 }

@@ -1,11 +1,12 @@
 import Projects from '@/components/Home/projects'
-import React from 'react'
+import Projects2 from '@/components/Home/projects2'
+import React, { Suspense } from 'react'
 
 function page() {
   return (
-    <div className='mt-20 mb-10'>
-        <Projects/>
-    </div>
+      <Suspense fallback={<p className="text-center">Loading projects...</p>}>
+        <Projects />
+      </Suspense>
   )
 }
 
