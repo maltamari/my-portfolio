@@ -5,6 +5,7 @@ import Submit from '../Form/Submit'
 import Description from '../Form/TextArea'
 import { handleSubmit } from '@/utils/action'
 import { LucideMail, LucidePhone } from 'lucide-react'
+import Link from 'next/link'
 
 function Contents() {
   return (
@@ -26,14 +27,28 @@ function Contents() {
               <div className='bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-lg flex items-center justify-center'>
                 <LucidePhone className="text-blue-600 dark:text-blue-400" size={20} />
               </div>
-              <p className='text-gray-700 dark:text-gray-300'>+00962792504045</p>
+              <p className='text-gray-700 dark:text-gray-300'>
+                   <Link 
+                                href="tel:+9620792504045" 
+                                className="text-gray-600 hover:text-blue-600 transition-colors"
+                            >
+                                +9620792504045
+                            </Link>
+              </p>
             </div>
             
             <div className='flex items-center gap-4'>
               <div className='bg-blue-50 dark:bg-blue-900/20 w-12 h-12 rounded-lg flex items-center justify-center'>
                 <LucideMail className="text-blue-600 dark:text-blue-400" size={20} />
               </div>
-              <p className='text-gray-700 dark:text-gray-300 break-words'>Mohammed.abdallah.dev@gmail.com</p>
+              <p className='text-gray-700 dark:text-gray-300 break-words'>
+                     <Link 
+                                href="mailto:Mohammed.abdallah.dev@gmail.com" 
+                                className="text-gray-600 hover:text-blue-600 transition-colors"
+                            >
+                                Mohammed.abdallah.dev@gmail.com
+                    </Link>
+              </p>
             </div>
           </div>
         </div>
