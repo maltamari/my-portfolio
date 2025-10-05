@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import { X, Facebook, Twitter, Youtube, Linkedin, LucideAlignLeft } from 'lucide-react';
+import Link from 'next/link';
 
 function Side() {
     const [isOpen, setIsOpen] = useState(false);
@@ -74,36 +75,36 @@ function Side() {
                         {/* Phone */}
                         <div>
                             <h3 className="text-gray-800 font-medium mb-2">Phone</h3>
-                            <a 
+                            <Link 
                                 href="tel:+9620792504045" 
                                 className="text-gray-600 hover:text-blue-600 transition-colors"
                             >
                                 +9620792504045
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Email */}
                         <div>
                             <h3 className="text-gray-800 font-medium mb-2">Email</h3>
-                            <a 
-                                href="mailto:Osama.alasasfah@gmail.com" 
+                            <Link 
+                                href="mailto:Mohammed.abdallah.dev@gmail.com" 
                                 className="text-gray-600 hover:text-blue-600 transition-colors"
                             >
                                 Mohammed.abdallah.dev@gmail.com
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Website */}
                         <div>
                             <h3 className="text-gray-800 font-medium mb-2">Website</h3>
-                            <a 
+                            <Link
                                 href="https://my-portfolio-mohameds-projects-9d3cfd32.vercel.app" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="text-gray-600 hover:text-blue-600 transition-colors"
                             >
                                my-portfolio-mohameds-projects-9d3cfd32.vercel.app
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Address */}
@@ -116,30 +117,30 @@ function Side() {
                         <div>
                             <h3 className="text-gray-800 font-medium mb-4">Social Links</h3>
                             <div className="flex space-x-4">
-                                <a 
+                                <Link 
                                     href="#" 
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Facebook size={20} />
-                                </a>
-                                <a 
+                                </Link>
+                                <Link 
                                     href="#" 
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Twitter size={20} />
-                                </a>
-                                <a 
+                                </Link>
+                                <Link
                                     href="#" 
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Youtube size={20} />
-                                </a>
-                                <a 
+                                </Link>
+                                <Link
                                     href="#" 
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Linkedin size={20} />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
