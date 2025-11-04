@@ -11,7 +11,7 @@ function Footer() {
           <Logo/>
         </div>
         <Link href="/" className="text-blue-400 hover:underline text-center break-words">
-          Mohamed Abdallah
+          Mohammed Abdallah
         </Link>
       </div>
       
