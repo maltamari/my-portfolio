@@ -16,8 +16,8 @@ function Services2() {
     role="listitem"
     className="item absolute lg:left-1/3 inset-0 min-w-[350px] max-w-md h-full flex-shrink-0
                snap-center bg-white dark:bg-black dark:text-amber-50
-               rounded-2xl shadow-lg border border-gray-200
-               p-6 hover:shadow-xl transition"
+               rounded-2xl  border border-gray-200
+               p-6 hover:shadow-md transition"
   >
     <div className="text-xl font-semibold mb-3 text-gray-800 dark:text-amber-50">
       <h2>{service.name}</h2>
