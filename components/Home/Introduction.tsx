@@ -56,7 +56,7 @@ function Introduction() {
             </div>
             <h5 className='text-2xl oswald-font'>1+ year of hands-on experience with industry-standard design tools</h5>         
           </div>
-          <Link href="/MohamedAbdallah.pdf" target="_blank" rel="noopener noreferrer" >
+          <Link href="/MohammedAbdallah.pdf" target="_blank" rel="noopener noreferrer" >
            <Button className="view">
               <svg className="svgIcon" viewBox="0 0 384 512">
                 <path
