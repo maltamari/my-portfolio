@@ -66,4 +66,25 @@ export const services: ServiceProps[] = [
     description:
       'Build and integrate RESTful APIs with backend services and third-party platforms.',
   },
+  {
+    name: 'Automation Workflows (n8n)',
+    description:
+      'Design and deploy advanced automation workflows using n8n — integrating APIs like Instagram, Facebook, Telegram, and Google Workspace to automate reports and business operations.',
+  },
+  {
+    name: 'AI-Powered Data Analysis',
+    description:
+      'Integrate OpenAI and machine learning models to generate marketing insights, performance summaries, and automated decision-making reports.',
+  },
+  {
+    name: 'Social Media Analytics Dashboards',
+    description:
+      'Build interactive dashboards that track social media metrics, engagement trends, and generate AI-powered monthly reports for clients.',
+  },
+  {
+    name: 'Cloud Integration & Hosting',
+    description:
+      'Deploy fast, scalable web applications using Vercel, Supabase, and Cloudinary with optimized performance and secure hosting.',
+  },
 ]
+
