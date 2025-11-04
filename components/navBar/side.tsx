@@ -98,12 +98,12 @@ function Side() {
                         <div>
                             <h3 className="text-gray-800 font-medium mb-2">Website</h3>
                             <Link
-                                href="https://my-portfolio-mohameds-projects-9d3cfd32.vercel.app" 
+                                href="https://my-portfolio-five-pi-96.vercel.app" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="text-gray-600 hover:text-blue-600 transition-colors"
                             >
-                               my-portfolio-mohameds-projects-9d3cfd32.vercel.app
+                               Website
                             </Link>
                         </div>
 
