@@ -119,24 +119,28 @@ function Side() {
                             <div className="flex space-x-4">
                                 <Link 
                                     href="#" 
+                                     target="_blank"
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Facebook size={20} />
                                 </Link>
                                 <Link 
                                     href="#" 
+                                     target="_blank"
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Twitter size={20} />
                                 </Link>
                                 <Link
                                     href="#" 
+                                     target="_blank"
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Youtube size={20} />
                                 </Link>
                                 <Link
                                     href="https://www.linkedin.com/in/mohammed-abdallah-7b2704277/" 
+                                     target="_blank"
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >
                                     <Linkedin size={20} />
