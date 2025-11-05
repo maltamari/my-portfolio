@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Data from "@/utils/data";
+import Image from 'next/image'
 
 function Projects() {
   const [rows, setRows] = useState<number[]>([]);
@@ -120,7 +121,7 @@ function Projects() {
                   <div className="text-center">
                     <h1 className="text-3xl font-bold mb-4">{selectedBox.item.title}</h1>
                     <div className="w-full border border-gray-300 rounded-md overflow-hidden">
-                      <img
+                      <Image
                         src={selectedBox.item.image}
                         className="w-full h-64 object-cover"
                         alt={selectedBox.item.title}
