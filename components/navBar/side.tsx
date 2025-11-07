@@ -96,14 +96,14 @@ function Side() {
 
                         {/* Website */}
                         <div>
-                            <h3 className="text-gray-800 font-medium mb-2">https://www.mohammed-labs.site</h3>
+                            <h3 className="text-gray-800 font-medium mb-2">Website</h3>
                             <Link
                                 href="https://www.mohammed-labs.site/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="text-gray-600 hover:text-blue-600 transition-colors"
                             >
-                               Website
+                              https://www.mohammed-labs.site
                             </Link>
                         </div>
 
