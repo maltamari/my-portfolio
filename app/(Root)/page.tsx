@@ -10,48 +10,22 @@ import { Suspense } from "react";
 export default function Home() {
   return (
     <>
-      {/* ✅ SEO & Structured Data */}
+      {/* ✅ SEO tags الخاصة بالصفحة الرئيسية فقط */}
       <Head>
         <title>Mohammed Abdallah — Full-Stack Developer</title>
         <meta
           name="description"
-          content="Portfolio of Mohammed Abdallah, a Full-Stack Web Developer specializing in Next.js, React, Supabase, and Prisma."
+          content="Explore the portfolio of Mohammed Abdallah — a Full-Stack Developer passionate about creating modern, scalable web applications using Next.js, React, Supabase, and Prisma."
         />
         <meta
           name="keywords"
-          content="Mohammed Abdallah, Full-Stack Developer, Next.js, React, Supabase, Prisma, Portfolio"
+          content="Mohammed Abdallah, Full-Stack Developer, Next.js, React, Supabase, Prisma, Portfolio, JavaScript, Web Development"
         />
         <link rel="canonical" href="https://www.mohammed-labs.site" />
-
-        {/* ✅ Structured Data (JSON-LD) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Mohammed Abdallah",
-              url: "https://www.mohammed-labs.site",
-              image:
-                "https://www.mohammed-labs.site/me.jpg",
-              sameAs: [
-                "https://www.linkedin.com/in/mohammed-abdallah-7b2704277/",
-                "https://github.com/maltamari",
-              ],
-              jobTitle: "Full-Stack Web Developer",
-              worksFor: {
-                "@type": "Organization",
-                name: "Freelance / BoldPro Marketing Agency",
-              },
-              description:
-                "Full-Stack Web Developer specialized in building modern web applications using Next.js, React, Supabase, and Prisma.",
-            }),
-          }}
-        />
       </Head>
 
       {/* ✅ الصفحة الرئيسية */}
-      <div>
+      <main>
         <Introduction />
 
         <Suspense fallback={<p className="text-center">Loading projects...</p>}>
@@ -63,7 +37,7 @@ export default function Home() {
         </Suspense>
 
         <Contents />
-      </div>
+      </main>
     </>
   );
 }
