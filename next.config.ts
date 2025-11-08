@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
+  siteUrl: 'https://www.mohammed-labs.site', 
+  generateRobotsTxt: true, 
+  sitemapSize: 7000,
+  changefreq: 'weekly',
+  priority: 0.7,
+  exclude: ['/404'],
+  robotsTxtOptions: {
+    additionalSitemaps: [
+      'https://www.mohammed-labs.site/sitemap.xml',
+    ],
+  },
 };
-
-export default nextConfig;
