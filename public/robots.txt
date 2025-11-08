@@ -7,3 +7,4 @@ Host: https://www.mohammed-labs.site
 
 # Sitemaps
 Sitemap: https://www.mohammed-labs.site/sitemap.xml
+Sitemap: https://www.mohammed-labs.site/sitemap-0.xml
