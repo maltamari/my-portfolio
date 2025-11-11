@@ -77,12 +77,12 @@ export const metadata: Metadata = {
     description:
       "Portfolio of Mohammed Abdallah, Full-Stack Web Developer specializing in Next.js, React, Supabase, and Prisma.",
     images: ["/og-image.png"],
-    creator: "@alt3marii", // ✅ غيّر هذا لحسابك على تويتر
+    creator: "@alt3marii",
   },
   icons: {
-  icon: "/favicon.ico",
-  shortcut: "/favicon.ico",
-  apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   robots: {
     index: true,
@@ -95,7 +95,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
 };
 
 export default function RootLayout({
@@ -155,7 +154,7 @@ export default function RootLayout({
           }}
         ></script>
 
-        {/* ✅ Logo / Organization Structured Data */}
+        {/* ✅ Logo / Organization Structured Data - محسّن */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -164,11 +163,21 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Mohammed Abdallah",
               url: "https://www.mohammed-labs.site",
-              logo: "https://www.mohammed-labs.site/favicon.ico",
+              logo: "https://www.mohammed-labs.site/logo.png", // ✅ غيّرته من favicon.ico
+              description: "Full-Stack Web Developer specialized in Next.js, React, and modern web technologies",
+              founder: {
+                "@type": "Person",
+                name: "Mohammed Abdallah"
+              },
               sameAs: [
                 "https://www.linkedin.com/in/mohammed-abdallah-7b2704277/",
                 "https://github.com/maltamari",
               ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                email: "mohammed.abdallah.dev@gmail.com",
+                contactType: "customer support",
+              },
             }),
           }}
         ></script>
