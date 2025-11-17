@@ -51,11 +51,11 @@ export const services: ServiceProps[] = [
     description:
       'Clean, responsive, and fast UIs using Tailwind CSS and reusable component systems.',
   },
-  {
-    name: 'Website Migration to Next.js',
-    description:
-      'Convert old static or frontend-only sites to full-stack Next.js applications with improved performance and SEO.',
-  },
+ {
+  name: 'Next.js Website Migration & SEO Upgrade',
+  description:
+    'Transform outdated static or traditional websites into high-performance Next.js applications with faster loading, stronger SEO, and a fully optimized modern architecture.',
+},
   {
     name: 'Authentication & Authorization',
     description:
