@@ -1,14 +1,7 @@
 import React from 'react';
+import { services } from '@/utils/links'
 
 // Mock data for demonstration
-const services = [
-  { name: 'Web Development', description: 'Building responsive and modern websites' },
-  { name: 'Mobile Apps', description: 'Creating native and cross-platform applications' },
-  { name: 'UI/UX Design', description: 'Designing beautiful user experiences' },
-  { name: 'Backend Development', description: 'Building robust server-side solutions' },
-  { name: 'Database Design', description: 'Structuring efficient data systems' },
-  { name: 'API Integration', description: 'Connecting services seamlessly' }
-];
 
 function Service() {
   return (
