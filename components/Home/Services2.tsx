@@ -14,7 +14,7 @@ function Services2() {
             key={service.name}
             className="bg-white dark:bg-gray-900 rounded-2xl 
                        border border-gray-200 dark:border-gray-800
-                       p-6 hover:shadow-xl transition-shadow"
+                       p-6 hover:shadow-xl dark:hover:shadow-[0_10px_40px_rgba(245,148,1,0.55)]  transition-shadow"
           >
             <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-amber-50">
               {service.name}
