@@ -1,14 +1,16 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://www.mohammed-labs.site', // رابط موقعك الرئيسي بدون /
-  generateRobotsTxt: true, // ينشئ robots.txt تلقائياً
+  siteUrl: 'https://www.mohammed-labs.site',
+  generateRobotsTxt: true,
   sitemapSize: 7000,
-  changefreq: 'weekly',
-  priority: 0.7,
-  exclude: ['/404'],
+  exclude: ['/404', '/api/*', '/admin/*'],
+
   robotsTxtOptions: {
-    additionalSitemaps: [
-      'https://www.mohammed-labs.site/sitemap.xml',
+    policies: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
     ],
-  },
+  },  
 };
