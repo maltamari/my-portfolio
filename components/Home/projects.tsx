@@ -50,7 +50,7 @@ function Projects() {
 
       {/* ===== الشبكة ===== */}
       <div className="flex-1/1 ">
-        <h1 className="text-5xl lg:text-7xl mt-10 ml-4 font-semibold oswald-font text-white">
+        <h1 className="text-5xl lg:text-7xl mt-10 ml-4 font-semibold oswald-font text-black dark:text-white">
           What I’ve Built
         </h1>
 
