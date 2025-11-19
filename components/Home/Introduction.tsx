@@ -10,7 +10,7 @@ function Introduction() {
 
   const toggleShow = () => setShowMore(!showMore)
 
-  const description = `I'm a Software Engineering graduate from Jordan, passionate about building modern full-stack applications with technologies like React, Next.js, Node.js, Python, and Supabase. My projects include a complete furniture e-commerce platform with admin/user dashboards, and a banking simulation system with secure authentication and transaction flows. I love crafting clean UIs, writing scalable backend logic, and continuously exploring new tools like Prisma and Clerk to build better digital solutions.`;
+  const description = `I’m a Software Engineering graduate from Jordan who builds modern, full-stack applications using technologies like React, Next.js, Node.js, Hono, Prisma, Supabase, and Python. My work includes a complete furniture e-commerce platform with admin and user dashboards, a secure banking simulation with authentication and transaction flows, and AI-powered dashboards for marketing automation. I enjoy creating clean, responsive UIs, integrating powerful tools like React Query for data management, and building scalable backend logic. I’m always exploring new technologies to deliver faster, smarter, and more efficient digital experiences.`;
 
   const maxChars = 200;
   const isLong = description.length > maxChars;
