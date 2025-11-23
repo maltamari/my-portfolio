@@ -5,7 +5,7 @@ type NavBarPagesProps={
 }
 export  const linksPages:NavBarPagesProps[] = [
      {name: 'Home',href: '/'},
-     {name: 'Service',href: '/service'},
+     {name: 'Services',href: '/service'},
      {name: 'Projects',href: '/projects'},
 ]
 export  const linksImages:NavBarPagesProps[] = [
