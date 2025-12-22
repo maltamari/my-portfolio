@@ -21,7 +21,7 @@ function Introduction() {
       <div className="flex flex-col lg:flex-row justify-baseline items-center lg:items-start gap-10 p-4">
         <Image width={300} height={300} src={"/me.jpg"} alt="My photo" loading="lazy" /> 
         <div className='flex flex-col justify-center items-start gap-2'>
-          <span className='oswald-font name'>🧑‍💻 Mohammed Abdallah — Full Stack Web Developer</span>
+          <span className='oswald-font name'>🧑‍💻 Mohammed Al-Tamari — Full Stack Web Developer</span>
           <h2 className='text-2xl w-full md:text-5xl font-bold oswald-font '>Turning ideas into interactive, real-world web experiences</h2>
 
           <p className='oswald-font leading-relaxed letter-spacing text-xl font-serif'>
