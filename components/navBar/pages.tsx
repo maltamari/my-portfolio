@@ -1,4 +1,4 @@
-import { linksPages } from '@/utils/links'
+import { linksPages } from '@/constants/links'
 import Link from 'next/link'
 import React from 'react'
 

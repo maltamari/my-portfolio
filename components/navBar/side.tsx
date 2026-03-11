@@ -139,7 +139,7 @@ function Side() {
                                     <Youtube size={20} />
                                 </Link>
                                 <Link
-                                    href="https://www.linkedin.com/in/mohammed-abdallah-7b2704277/" 
+                                    href="https://www.linkedin.com/in/mohammed-al-tamari-7b2704277/" 
                                      target="_blank"
                                     className="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded transition-all duration-200"
                                 >

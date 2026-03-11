@@ -1,4 +1,6 @@
-const Data = [
+import type { Project } from "@/types";
+
+const Data: Project[] = [
   {
     image: "/maison.png",
     title: "Maison Élan",

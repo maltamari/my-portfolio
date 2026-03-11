@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { linksPages } from '@/utils/links'
+import { linksPages } from '@/constants/links'
 import Link from 'next/link'
 
 function SideBar() {

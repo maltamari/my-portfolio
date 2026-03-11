@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Data from "@/utils/data";
+import Data from "@/data/projects";
+import type { Project } from "@/types";
 import Image from 'next/image'
 
 function Projects() {
@@ -10,7 +11,7 @@ function Projects() {
     row: number;
     cell: number;
     color: string;
-    item: typeof Data[0];
+    item: Project;
   } | null>(null);
 
   const boxRefs = useRef<HTMLDivElement[][]>([]);
@@ -49,7 +50,7 @@ function Projects() {
 
       {/* ===== الشبكة ===== */}
       <div className="flex-1/1 ">
-        <h1 className="text-5xl lg:text-7xl mt-10 ml-4 font-semibold oswald-font text-white">
+        <h1 className="text-5xl lg:text-7xl mt-10 ml-4 font-semibold oswald-font text-black  dark:text-white ">
           What I’ve Built
         </h1>
 
@@ -120,14 +121,21 @@ function Projects() {
                 <div className="flex flex-col gap-6 mt-8 text-gray-900">
                   <div className="text-center">
                     <h1 className="text-3xl font-bold mb-4">{selectedBox.item.title}</h1>
-                    <div className="w-full border border-gray-300 rounded-md overflow-hidden">
+                    <div className="w-full  md:h-[350px] border border-gray-300 rounded-md overflow-hidden">
                       <Image
+                        width={1200}
+                        height={830}
+                        priority
+                        placeholder="blur"
+                        blurDataURL="data:image/..."
+                        quality={85}
                         src={selectedBox.item.image}
-                        className="w-full h-64 object-cover"
+                        className=" w-[400px] md:w-full h-[250px] md:h-[350px] object-cover"
                         alt={selectedBox.item.title}
-                        loading="lazy"
+                      
                       />
                     </div>
+              
                   </div>
 
                   <div>

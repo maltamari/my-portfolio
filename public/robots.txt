@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://my-portfolio-seven-sable-75.vercel.app
+Host: https://www.mohammed-labs.site
 
 # Sitemaps
-Sitemap: https://my-portfolio-seven-sable-75.vercel.app/sitemap.xml
+Sitemap: https://www.mohammed-labs.site/sitemap.xml

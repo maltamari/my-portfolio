@@ -2,10 +2,10 @@
 "use server";
 
 import nodemailer from "nodemailer";
-import { validateSchema } from "./schema";
+import { validateSchema } from "@/types/schema";
 
 export async function handleSubmit(
-  prev: any,
+  _prev: { message: string },
   formData: FormData
 ): Promise<{ message: string }> {
   const rowData = Object.fromEntries(formData.entries());

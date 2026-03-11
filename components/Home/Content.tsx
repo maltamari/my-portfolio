@@ -3,7 +3,7 @@ import FormContainer from '../Form/FormContainer'
 import FormInput from '../Form/FormInput'
 import Submit from '../Form/Submit'
 import Description from '../Form/TextArea'
-import { handleSubmit } from '@/utils/action'
+import { handleSubmit } from '@/server/actions/contact'
 import { LucideMail, LucidePhone } from 'lucide-react'
 import Link from 'next/link'
 

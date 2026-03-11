@@ -1,14 +1,14 @@
-import { linksImages } from '@/utils/links'
-import { LucideFileDown } from 'lucide-react'
+"use client"
+import { linksImages } from '@/constants/links'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button } from '../ui/button'
 
 function Introduction() {
   const [showMore, setShowMore] = useState(false)
 
-  const toggleShow = () => setShowMore(!showMore)
+  const toggleShow = () => setShowMore((prev) => !prev)
 
   const description = `I'm a Software Engineering graduate from Jordan, passionate about building modern full-stack applications with technologies like React, Next.js, Node.js, Python, and Supabase. My projects include a complete furniture e-commerce platform with admin/user dashboards, and a banking simulation system with secure authentication and transaction flows. I love crafting clean UIs, writing scalable backend logic, and continuously exploring new tools like Prisma and Clerk to build better digital solutions.`;
 
@@ -43,8 +43,12 @@ function Introduction() {
                   <div className='bg-gray-50 relative hover:scale-110 transition-transform duration-300 ease-in-out w-[65px] h-[60px] rounded shadow-md flex items-center justify-center' key={index}>
                     <Image
                       src={image.href}
-                      width={50}
-                      height={50}
+                      width={1200}
+                      height={630}
+                      priority
+                      placeholder="blur"
+                      blurDataURL="data:image/..."
+                      quality={85}
                       alt={"Mohamed Abdallah Profile Picture"}
                     />
                     <div className="absolute border-sky-100 border-1 rounded-sm inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-350 bg-black text-white text-sm font-bold">

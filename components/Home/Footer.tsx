@@ -24,7 +24,7 @@ function Footer() {
       <div className='flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-2 text-center max-w-full px-2'>
         <p className="text-sm sm:text-base break-words">© 2025 All Rights Reserved by</p>
         <Link href="/" className="text-blue-400 hover:underline text-sm sm:text-base break-words">
-          Mohamed Abdallah
+          Mohammed Abdallah
         </Link>
       </div>
     </footer>
