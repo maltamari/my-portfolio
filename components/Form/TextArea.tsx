@@ -1,7 +1,5 @@
 import React from 'react'
-import { Label } from '../ui/label'
-import { Textarea } from '../ui/textarea'
- 
+
 interface TextAreaProps {
   iD: string
   label?: string
@@ -9,25 +7,23 @@ interface TextAreaProps {
   defaultValue?: string
   start?: string
 }
-function Description({ iD, start,label, placeholder, defaultValue }: TextAreaProps) {
+
+function Description({ iD, start, label, placeholder, defaultValue }: TextAreaProps) {
   return (
-    <div>
-      
-      <Label
+    <div className='flex flex-col gap-1.5'>
+      <label
         htmlFor={iD}
-        className="block text-sm capitalize font-medium "
+        className="text-sm font-medium text-foreground flex items-center gap-1 capitalize"
       >
-         <div className='flex items-center gap-1'>
-        {label } 
-        <span className=' text-red-500'>{start}</span>
-        </div>
-      </Label>
-      <Textarea
+        {label} 
+        {start && <span className='text-red-500'>{start}</span>}
+      </label>
+      <textarea
         id={iD}
         name={label || iD}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+        className="flex min-h-[120px] w-full rounded-xl border border-border bg-background px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all resize-y"
         required
       />
     </div>

@@ -1,25 +1,28 @@
 "use client"
 import React from 'react'
-import { Button } from '../ui/button'
-import { useFormState, useFormStatus } from 'react-dom'
-import { LucideLoader2 } from 'lucide-react'
+import { useFormStatus } from 'react-dom'
+import { LucideLoader2, Send } from 'lucide-react'
 
 function Submit() {
-  const {pending}=useFormStatus()
+  const { pending } = useFormStatus()
   return (
-    <Button 
+    <button 
       type="submit"
-      className="mt-4 w-full capitalize bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md shadow-sm"
+      disabled={pending}
+      className="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-medium text-primary-foreground bg-primary rounded-xl overflow-hidden transition-transform hover:scale-105 active:scale-95 disabled:opacity-70 disabled:pointer-events-none disabled:scale-100"
     >
-        {pending ? (
+      {pending ? (
         <>
-          <LucideLoader2 className="animate-spin w-5 h-5" />
+          <LucideLoader2 className="animate-spin" size={18} />
           Sending...
         </>
       ) : (
-        "Send Message"
+        <>
+          Send Message
+          <Send size={18} />
+        </>
       )}
-    </Button>
+    </button>
   )
 }
 

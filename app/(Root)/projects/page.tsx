@@ -1,18 +1,16 @@
-import Projects from '@/components/Home/projects'
-import React, { Suspense } from 'react'
+import React from 'react'
 import type { Metadata } from "next";
+import Projects2 from '@/components/Home/projects2';
 
 export const metadata: Metadata = {
-  title: "Projects",
-  description:
-    "Explore the latest web development projects built by Mohammed Abdallah using Next.js, React, and Supabase.",
+  title: "Projects | Mohammed Abdallah",
+  description: "A selection of my recent work in web development, automation, and full-stack engineering.",
 };
-function page() {
+
+export default function page() {
   return (
-      <Suspense fallback={<p className="text-center">Loading projects...</p>}>
-        <Projects />
-      </Suspense>
+    <div className='flex flex-col w-full min-h-screen pt-12'>
+      <Projects2 />
+    </div>
   )
 }
-
-export default page

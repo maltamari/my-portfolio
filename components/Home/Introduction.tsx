@@ -1,78 +1,126 @@
-"use client"
-import { linksImages } from '@/constants/links'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { Button } from '../ui/button'
+"use client";
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+import { ArrowRight, Download, TerminalSquare } from "lucide-react";
+import { linksImages } from "@/constants/links";
 
-function Introduction() {
-  const [showMore, setShowMore] = useState(false)
+export default function Introduction() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+    },
+  };
 
-  const toggleShow = () => setShowMore((prev) => !prev)
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
 
-  const description = `I'm a Software Engineering graduate from Jordan, passionate about building modern full-stack applications with technologies like React, Next.js, Node.js, Python, and Supabase. My projects include a complete furniture e-commerce platform with admin/user dashboards, and a banking simulation system with secure authentication and transaction flows. I love crafting clean UIs, writing scalable backend logic, and continuously exploring new tools like Prisma and Clerk to build better digital solutions.`;
-
-  const maxChars = 200;
-  const isLong = description.length > maxChars;
-  const displayedText = showMore ? description : description.slice(0, maxChars) + (isLong ? "..." : "");
+  const description = `I'm a Software Engineering graduate from Jordan, passionate about building modern full-stack applications with technologies like React, Next.js, Node.js, Python, and Supabase. My projects include complete e-commerce platforms with admin dashboards, and robust automation systems with secure integration flows. I love crafting clean UIs, writing scalable backend logic, and continuously exploring new tools to build better digital solutions.`;
 
   return (
-    <section className='border w-full  mt-30  *:border-gray-200 dark:border-gray-700 rounded-lg shadow-md'>
-      <div className="flex flex-col lg:flex-row justify-baseline items-center lg:items-start gap-10 p-4">
-        <Image width={300} height={300} src={"/me.jpg"} alt="My photo" loading="lazy" /> 
-        <div className='flex flex-col justify-center items-start gap-2'>
-          <span className='oswald-font name'>🧑‍💻 Mohammed Abdallah — Full Stack Web Developer</span>
-          <h2 className='text-2xl w-full md:text-5xl font-bold oswald-font '>Turning ideas into interactive, real-world web experiences</h2>
+    <section className="relative w-full min-h-[85vh] flex flex-col justify-center items-center py-20 overflow-hidden">
+      {/* Background subtle glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 dark:bg-blue-600/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-          <p className='oswald-font leading-relaxed letter-spacing text-xl font-serif'>
-            {displayedText}
-            {isLong && (
-              <button
-                onClick={toggleShow}
-                className="ml-2 text-blue-500 underline hover:text-blue-700 transition duration-200 text-base"
-              >
-                {showMore ? "Show Less" : "Show More"}
-              </button>
-            )}
-          </p>
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="w-full max-w-5xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8"
+      >
+        {/* Left Column (Text) */}
+        <div className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-6">
+            <TerminalSquare size={16} className="text-blue-500" />
+            <span className="oswald-font tracking-wide">MOHAMMED ABDALLAH</span>
+          </motion.div>
 
-          <div className='flex flex-col md:flex-row items-center gap-6 mt-2'>
-            <div className="overflow-hidden w-[350] flex">
-              <div className="flex gap-8 py-4 whitespace-nowrap animate-infinite-scroll min-w-max"> 
-                {[...linksImages, ...linksImages].map((image, index) => (
-                  <div className='bg-gray-50 relative hover:scale-110 transition-transform duration-300 ease-in-out w-[65px] h-[60px] rounded shadow-md flex items-center justify-center' key={index}>
-                    <Image
-                      src={image.href}
-                      width={1200}
-                      height={630}
-                      priority
-                      placeholder="blur"
-                      blurDataURL="data:image/..."
-                      quality={85}
-                      alt={"Mohamed Abdallah Profile Picture"}
-                    />
-                    <div className="absolute border-sky-100 border-1 rounded-sm inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-350 bg-black text-white text-sm font-bold">
-                      {image.name}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <h5 className='text-2xl oswald-font'>1+ year of hands-on experience with industry-standard design tools</h5>         
+          <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+            Building modern <br className="hidden lg:block" />
+            <span className="text-gradient-primary">digital experiences.</span>
+          </motion.h1>
+
+          <motion.p variants={itemVariants} className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-8">
+            {description}
+          </motion.p>
+
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center lg:justify-start">
+            <Link
+              href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="group relative inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-medium text-primary-foreground bg-primary rounded-xl overflow-hidden transition-transform hover:scale-105 active:scale-95"
+            >
+              View Projects
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+
+            <Link
+              href="/MohammedAbdallah.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-3.5 text-sm font-medium text-foreground bg-secondary/80 hover:bg-secondary rounded-xl transition-all hover:scale-105 active:scale-95 border border-border"
+            >
+              Download CV
+              <Download size={18} className="text-muted-foreground group-hover:text-foreground transition-colors" />
+            </Link>
+          </motion.div>
+        </div>
+
+        {/* Right Column (Image) */}
+        <motion.div variants={itemVariants} className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-blue-500/20 to-purple-500/20 dark:from-blue-500/30 dark:to-purple-500/30 transform rotate-6 scale-105 -z-10 transition-transform duration-700 hover:rotate-12" />
+          <div className="relative w-full h-full rounded-3xl overflow-hidden border border-border/50 shadow-2xl glass">
+            <Image
+              src="/me.jpg"
+              alt="Mohammed Abdallah Profile Picture"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+              priority
+              sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 400px"
+            />
           </div>
-          <Link href="/MohammedAbdallah.pdf" target="_blank" rel="noopener noreferrer" >
-           <Button className="view">
-              <svg className="svgIcon" viewBox="0 0 384 512">
-                <path
-                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-                ></path>
-              </svg>
-          </Button>
-           </Link>
-        </div>  
-      </div>
-    </section>
-  )
-}
+        </motion.div>
+      </motion.div>
 
-export default Introduction
+      {/* Tech Stack Ticker (Animated Marquee using Framer Motion) */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 1 }}
+        className="w-full mt-24 pt-8 border-t border-border/40 flex flex-col items-center"
+      >
+        <p className="text-sm font-medium text-muted-foreground uppercase tracking-widest mb-6 oswald-font">
+          Technologies & Tools
+        </p>
+        <div className="w-full overflow-hidden flex relative [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <motion.div
+            className="flex gap-12 items-center whitespace-nowrap px-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: 25,
+            }}
+          >
+            {[...linksImages, ...linksImages].map((tech, i) => (
+              <div key={i} className="flex items-center gap-3 group opacity-60 hover:opacity-100 transition-opacity">
+                <div className="relative w-8 h-8 md:w-10 md:h-10">
+                  <Image src={tech.href} alt={tech.name} fill className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" />
+                </div>
+                <span className="font-semibold text-lg">{tech.name}</span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
